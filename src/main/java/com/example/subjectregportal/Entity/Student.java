@@ -17,18 +17,17 @@ public class Student {
     private String email;
     @Column(nullable = false)
     private String gender;
-
-    private String semester;
     private String coursename;
+    private String password;
 
-    public Student(Long id, String firstname, String lastname, String email, String gender, String semester, String coursename) {
+    public Student(Long id, String firstname, String lastname, String email, String gender, String coursename, String password) {
         this.id = id;
         this.firstname = firstname;
         this.lastname = lastname;
         this.email = email;
         this.gender = gender;
-        this.semester = semester;
         this.coursename = coursename;
+        this.password = password;
     }
 
     public Student() {
@@ -75,13 +74,7 @@ public class Student {
         this.gender = gender;
     }
 
-    public String getSemester() {
-        return semester;
-    }
 
-    public void setSemester(String semester) {
-        this.semester = semester;
-    }
 
     public String getCoursename() {
         return coursename;
@@ -89,5 +82,13 @@ public class Student {
 
     public void setCoursename(String coursename) {
         this.coursename = coursename;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }
