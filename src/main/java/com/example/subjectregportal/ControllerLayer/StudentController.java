@@ -1,10 +1,13 @@
 package com.example.subjectregportal.ControllerLayer;
 
 import com.example.subjectregportal.Entity.Student;
+import com.example.subjectregportal.Response.LoginResponse;
+import com.example.subjectregportal.ServiceLayer.LoginDto;
 import com.example.subjectregportal.ServiceLayer.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -14,6 +17,7 @@ public class StudentController  {
 
     @Autowired
     private  StudentService studentService;
+
 
     public StudentController(StudentService studentService) {
         this.studentService = studentService;
@@ -27,6 +31,7 @@ public class StudentController  {
 
     @PostMapping("/portal/save")
     public ResponseEntity<Student> saveStudent(@RequestBody Student student){
+
         return new ResponseEntity<Student>(studentService.saveStudent(student), HttpStatus.CREATED);
     }
 
@@ -45,5 +50,10 @@ public class StudentController  {
     public ResponseEntity<String> deleteStudent(@PathVariable("id")Long id){
         studentService.delete(id);
         return new ResponseEntity<String>("Deleted Successfully",HttpStatus.FOUND);
+    }
+    @PostMapping("/login")
+    public ResponseEntity<?> login(@RequestBody LoginDto loginDto){
+        LoginResponse loginResponse=studentService.loginstudent(loginDto);
+        return ResponseEntity.ok(loginResponse);
     }
 }
