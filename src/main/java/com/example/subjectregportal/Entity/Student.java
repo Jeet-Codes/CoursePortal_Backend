@@ -17,7 +17,7 @@ public class Student {
     private String email;
     @Column(nullable = false)
     private String gender;
-    @Column(nullable = false)
+
     private String semester;
     private String coursename;
 
