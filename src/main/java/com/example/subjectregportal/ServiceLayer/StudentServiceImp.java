@@ -82,7 +82,7 @@ public class StudentServiceImp implements StudentService {
                 }
             }
             else {
-                return new LoginResponse("password not  mmatch",false);
+                return new LoginResponse("password not  match",false);
             }
         }
         else {
