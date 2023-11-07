@@ -1,4 +1,4 @@
-package com.example.subjectregportal;
+package com.example.subjectregportal.RepoLayer;
 
 import com.example.subjectregportal.Entity.Student;
 import org.springframework.data.jpa.repository.JpaRepository;
