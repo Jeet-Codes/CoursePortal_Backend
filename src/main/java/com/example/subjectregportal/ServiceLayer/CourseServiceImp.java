@@ -1,5 +1,6 @@
 package com.example.subjectregportal.ServiceLayer;
 
+import com.example.subjectregportal.CourseNotFoundException;
 import com.example.subjectregportal.Entity.Course;
 import com.example.subjectregportal.RepoLayer.CourseRepo;
 import com.example.subjectregportal.StudentNotFoundException;
@@ -35,14 +36,14 @@ public class CourseServiceImp implements CourseService{
         if(Cs.isPresent()){
             return  Cs.get();
         }else{
-            throw new StudentNotFoundException("Course","Courseid",id);
+            throw new CourseNotFoundException("Course","Courseid",id);
         }
     }
 
     @Override
     public Course update(Course course, Long id) {
         courseRepo.findById(id);
-        courseRepo.findById(id).orElseThrow(()-> new StudentNotFoundException("Course","Courseid",id));
+        courseRepo.findById(id).orElseThrow(()-> new CourseNotFoundException("Course","Courseid",id));
         courseRepo.save(course);
         return course;
     }
@@ -50,7 +51,7 @@ public class CourseServiceImp implements CourseService{
     @Override
     public void delete(Long id) {
         courseRepo.findById(id).orElseThrow(()
-                ->new StudentNotFoundException("Course","Courseid",id));
+                ->new CourseNotFoundException("Course","Courseid",id));
         courseRepo.deleteById(id);
     }
 
