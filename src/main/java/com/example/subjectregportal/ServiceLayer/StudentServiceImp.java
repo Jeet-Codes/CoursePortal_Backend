@@ -3,7 +3,7 @@ package com.example.subjectregportal.ServiceLayer;
 import com.example.subjectregportal.Entity.Student;
 import com.example.subjectregportal.Response.LoginResponse;
 import com.example.subjectregportal.StudentNotFoundException;
-import com.example.subjectregportal.StudentRepo;
+import com.example.subjectregportal.RepoLayer.StudentRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
