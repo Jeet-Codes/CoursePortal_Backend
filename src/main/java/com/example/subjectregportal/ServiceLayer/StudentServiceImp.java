@@ -30,7 +30,7 @@ public class StudentServiceImp implements StudentService {
 
     @Override
     public List<Student> getSt() {
-        System.out.println("1");
+//        System.out.println("1");  Testing Purpose
         return studentRepo.findAll();
     }
 //
