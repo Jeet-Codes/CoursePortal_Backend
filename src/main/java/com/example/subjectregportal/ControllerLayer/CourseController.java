@@ -1,7 +1,6 @@
 package com.example.subjectregportal.ControllerLayer;
 
 import com.example.subjectregportal.Entity.Course;
-import com.example.subjectregportal.Entity.Student;
 import com.example.subjectregportal.ServiceLayer.CourseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
