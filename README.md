@@ -21,7 +21,7 @@ Certainly! To run a Spring Boot project from the given GitHub repository using I
    - Navigate to the directory where you want to clone the project.
    - Run the following command to clone the repository:
      ```bash
-     git clone https://github.com/Jeet-Codes/CoursePortal_Backend.git
+     git clone [https://github.com/Jeet-Codes/CoursePortal_Backend.git](https://github.com/Jeet-Codes/CoursePortal_Backend.git)
      ```
    - This will create a local copy of the project on your machine.
 
